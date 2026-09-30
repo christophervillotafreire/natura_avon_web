@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sand-100 text-charcoal-800 font-sans;
+  }
+
+  ::selection {
+    background-color: #F8D5DB;
+    color: #121110;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-charcoal-900;
+  }
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F2EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7BBA5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D45B7F;
+}
+
+/* Glassmorphism utilities */
+.glass-editorial {
+  background: rgba(245, 242, 235, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: rgba(250, 248, 245, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 226, 214, 0.85);
+}
+
+.glass-coquette {
+  background: rgba(253, 246, 247, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 213, 219, 0.7);
+}
+
+/* Typographic background watermark (as in the ORYGN fashion reference) */
+.watermark-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: rgba(232, 226, 214, 0.35);
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.85;
+}
